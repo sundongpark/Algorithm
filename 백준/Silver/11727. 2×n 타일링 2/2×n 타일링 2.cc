@@ -8,7 +8,6 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int n;
-	int ans = 0;
 	int arr[1001] = { 0 };
 	cin >> n;
 	arr[0] = 1;
