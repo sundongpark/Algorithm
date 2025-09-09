@@ -9,8 +9,7 @@ int main()
 
 	int n, f;
 	cin >> n >> f;
-	int m = n - n % 100;
-	printf("%02d", ((m + f - 1) / f) * f % 100);
+	printf("%02d", (((n - n % 100) + f - 1) / f) * f % 100);
 
 	return 0;
 }
