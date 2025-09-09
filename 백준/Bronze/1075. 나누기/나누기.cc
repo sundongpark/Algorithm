@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main()
@@ -10,14 +9,8 @@ int main()
 
 	int n, f;
 	cin >> n >> f;
-
-	n = n / 100 * 100;
-	int i = 0;
-	for (i = 0; i < 100; i++)
-		if (!((n + i) % f))
-			break;
-
-	cout << setw(2) << setfill('0') << i;
+	int m = n - n % 100;
+	printf("%02d", ((m + f - 1) / f) * f % 100);
 
 	return 0;
 }
