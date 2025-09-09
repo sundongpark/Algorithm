@@ -21,4 +21,6 @@ int main()
 	for (auto x : vt)
 		cout << x << " ";
 	cout << "\n";
+
+	return 0;
 }
