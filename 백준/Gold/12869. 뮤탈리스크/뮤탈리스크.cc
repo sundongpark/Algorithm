@@ -27,12 +27,9 @@ int solve(int a, int b, int c) {
     visited[a][b][c] = true;
 
     int best = 987654321;
-    for (auto d : dmg) {
-        int na = max(0, a - d[0]);
-        int nb = max(0, b - d[1]);
-        int nc = max(0, c - d[2]);
-        best = min(best, 1 + solve(na, nb, nc));
-    }
+    for (auto d : dmg)
+        best = min(best, 1 + solve(max(0, a - d[0]), max(0, b - d[1]), max(0, c - d[2])));
+
     return dp[a][b][c] = best;
 }
 
